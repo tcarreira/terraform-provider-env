@@ -6,7 +6,7 @@ description: |-
 
 # Env Provider
 
-The "random" provider allows the use of environment variables within Terraform
+The env provider allows the use of environment variables within Terraform
 configurations. This is a *logical provider*, which means that it works
 entirely within Terraform's logic, and doesn't interact with any other
 services.
