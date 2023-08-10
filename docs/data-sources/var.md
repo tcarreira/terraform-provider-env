@@ -14,16 +14,12 @@ Environment Variable data source
 
 ```terraform
 data "env_var" "example" {
-  id = "EXAMPLE_ENV"
-}
-output "out" {
-  value = data.env_var.example
+  id       = "EXAMPLE_ENV"
+  required = true # (optional) plan will error if not found
 }
 
-# if 'required', an error occurs when env is not found
-data "env_var" "example" {
-  id       = "EXAMPLE_ENV"
-  required = true
+output "out" {
+  value = data.env_var.example.value
 }
 ```
 
