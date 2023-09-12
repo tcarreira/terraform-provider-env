@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 )
 
-func TestAccPersonDataSource(t *testing.T) {
+func TestAccEnvDataSource(t *testing.T) {
 	randomValue := fmt.Sprintf("somerandom_%d", rand.Int())
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,
