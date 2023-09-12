@@ -44,6 +44,7 @@ func (p *EnvProvider) Resources(ctx context.Context) []func() resource.Resource 
 func (p *EnvProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{
 		NewVarDataSource,
+		NewSensitiveDataSource,
 	}
 }
 
